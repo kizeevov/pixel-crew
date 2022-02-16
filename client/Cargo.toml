@@ -21,6 +21,9 @@ yew-router = "0.16.0"
 wasm-bindgen = "0.2"
 wasm-logger = "0.2.0"
 wee_alloc = "0.4.5"
+weblog = "0.3.0"
+stylist = "0.10"
+itertools = "0.10.3"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.14"
