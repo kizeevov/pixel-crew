@@ -1,0 +1,99 @@
+body {
+  padding: 0px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  background: transparent;
+}
+
+header {
+  height: 7vh;
+  border-bottom: 0.1em solid #006064;
+  margin: 0 2em;
+}
+
+footer {
+  height: 5vh;
+}
+
+header,
+footer,
+article,
+nav,
+aside {
+  padding: 1em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.pc-app {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #01939a;
+}
+
+.pc-main {
+  display: flex;
+  flex: 1;
+}
+
+.pc-main > article {
+  flex: 1;
+  order: 1;
+}
+
+.pc-div-canvas {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pc-div-canvas div {
+  flex: none;
+  max-width: 50%;
+}
+
+.pc-pixel-canvas {
+  background-color: #006064;
+  padding: 0.4em;
+  width: 50em;
+  height: 50em;
+  display: grid;
+  grid-template-columns: repeat(0, 1fr);
+  grid-template-rows: repeat(0, 1fr);
+  -webkit-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 0px 0px rgba(0, 0, 0, 0.2);
+}
+
+.pc-pixel-button {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  background-color: white;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 0.1em solid #b6b6b6;
+  border-right: 0.1em solid #b6b6b6;
+}
+
+.pc-pixel-button:hover {
+  border: 0.2em solid #ffab00;
+}
+
+/*# sourceMappingURL=/styles.164d45a1.css.map */
