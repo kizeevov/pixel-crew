@@ -18,10 +18,4 @@ pub fn app() -> Html {
             </div>
         </BrowserRouter>
     }
-    // html! {
-    //     <BrowserRouter>
-    //         <Nav />
-    //         <Switch<AppRoute> render={Switch::render(switch)} />
-    //     </BrowserRouter>
-    // }
 }

@@ -1,0 +1,7 @@
+[tasks.client-build]
+command = "yarn"
+args = ["--cwd", "client", "build"]
+
+[tasks.client-start]
+command = "yarn"
+args = ["--cwd", "client", "start"]

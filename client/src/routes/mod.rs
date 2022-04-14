@@ -2,8 +2,8 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 pub mod about;
-pub mod home;
 pub mod draw;
+pub mod home;
 
 use about::About;
 use draw::Draw;
