@@ -1,0 +1,6 @@
+[workspace]
+default-members = ["client"]
+members = [
+    "client",
+    "program",
+]

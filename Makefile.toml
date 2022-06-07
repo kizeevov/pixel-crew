@@ -1,3 +1,4 @@
 extend = [
-    { path = "./client/Makefile.toml" }
+    { path = "./client/Makefile.toml" },
+    { path = "./program/Makefile.toml" }
 ]

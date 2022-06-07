@@ -1,0 +1,7 @@
+[tasks.program-build]
+command = "cargo"
+args = ["build-bpf", "--manifest-path", "./program/Cargo.toml"]
+
+[tasks.program-test]
+command = "cargo"
+args = ["test-bpf", "--manifest-path", "./program/Cargo.toml"]
