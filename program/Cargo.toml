@@ -1,5 +1,5 @@
 [package]
-name = "program"
+name = "pixel-crew-program"
 version = "0.1.0"
 edition = "2021"
 
@@ -10,14 +10,15 @@ test-bpf = []
 [dependencies]
 borsh = "0.9.3"
 thiserror = "1.0.25"
-solana-program = "1.10.21"
+solana-program = "1.10.24"
+spl-token = "3.3.0"
 
 [dev-dependencies]
 assert_matches = "1.4.0"
-solana-program-test = "=1.10.21"
-solana-sdk = "=1.10.21"
-solana-logger = "=1.10.21"
-solana-validator = "=1.10.21"
+solana-program-test = "1.10.24"
+solana-sdk = "1.10.24"
+solana-logger = "1.10.24"
+solana-validator = "1.10.24"
 
 [lib]
 crate-type = ["cdylib", "lib"]

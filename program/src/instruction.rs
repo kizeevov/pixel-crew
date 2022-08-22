@@ -1,4 +1,5 @@
-use crate::state::Config;
+use crate::state::CanvasConfig;
+
 use borsh::{BorshDeserialize, BorshSerialize};
 use solana_program::instruction::{AccountMeta, Instruction};
 use solana_program::pubkey::Pubkey;
@@ -30,7 +31,7 @@ pub enum PixelCrewInstruction {
 
 impl PixelCrewInstruction {
     pub fn create(admin: &Pubkey, new_admin: [u8; 32], width: u32, height: u32) -> Instruction {
-        let (config_pubkey, _) = Config::get_config_pubkey_with_bump();
+        let (config_pubkey, _) = CanvasConfig::get_config_pubkey_with_bump();
         Instruction::new_with_borsh(
             crate::id(),
             &PixelCrewInstruction::Create {
@@ -45,5 +46,13 @@ impl PixelCrewInstruction {
                 AccountMeta::new_readonly(system_program::id(), false),
             ],
         )
+    }
+
+    pub fn draw() -> Instruction {
+        todo!()
+    }
+
+    pub fn sell(admin: &Pubkey) -> Instruction {
+        todo!()
     }
 }
