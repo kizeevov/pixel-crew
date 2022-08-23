@@ -9,18 +9,18 @@ use crate::routes::{switch, AppRoute};
 pub fn app() -> Html {
     html! {
         <BrowserRouter>
-            <Header />
-            <Body />
-            // <div class="body">
-            //     <div class="pc-app">
-            //       <div class="pc-main">
-            //         <article>
-            //           <Switch<AppRoute> render={Switch::render(switch)} />
-            //         </article>
-            //       </div>
-            //     </div>
+            // <div class="pc-app">
+                <Header />
+                // <div class="pc-main">
+                //     <article>
+                //         <Switch<AppRoute> render={Switch::render(switch)} />
+                //     </article>
+                // </div>
+                    <article>
+                        <Switch<AppRoute> render={Switch::render(switch)} />
+                    </article>
+                <Footer />
             // </div>
-            <Footer />
         </BrowserRouter>
     }
 }

@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   padding: 0px;
   margin: 0;
@@ -7,6 +11,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   background-color: #01939a;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 * {
@@ -23,18 +31,18 @@ header {
   border-bottom: 0.1em solid #006064;
   margin: 0 2em;
 
-  position:fixed;
-  left:0;
-  right:0;
-  top:0;
+  //position:fixed;
+  //left:0;
+  //right:0;
+  //top:0;
 }
 
 footer {
   height: 5vh;
-  position:fixed;
-  left:0;
-  right:0;
-  bottom:0;
+  //position:fixed;
+  //left:0;
+  //right:0;
+  //bottom:0;
 }
 
 header,
@@ -65,33 +73,53 @@ nav {
 //  padding: 10px;
 //}
 
-.body {
-  position:fixed;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
-  //overflow-y:auto;
-  margin-top: 6vh;
-  margin-bottom: 5vh;
+//.body {
+//  position:fixed;
+//  left:0;
+//  right:0;
+//  top:0;
+//  bottom:0;
+//  //overflow-y:auto;
+//  margin-top: 6vh;
+//  margin-bottom: 5vh;
+//}
+
+//.pc-app {
+//
+//}
+
+//.pc-main {
+//  display: flex;
+//  flex: 1;
+//  height: 100%;
+//}
+//
+//.pc-main > article {
+//  flex: 1;
+//  order: 1;
+//}
+
+.square {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  background-color: #ccc;
+  position: relative;
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #ffab00;
 }
 
-.pc-app {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-}
 
-.pc-main {
-  display: flex;
+
+
+
+article {
   flex: 1;
-}
-
-.pc-main > article {
-  flex: 1;
-  order: 1;
+  // order: 1;
 }
 
 .pc-div-canvas {
@@ -111,8 +139,8 @@ nav {
   position: relative;
   background-color: #006064;
   padding: 0.4em;
-  width: 50vw;
-  height: 50vw;
+  //width: 50vw;
+  //height: 50vh;
 
   display: grid;
   grid-template-columns: repeat(0, 1fr);
