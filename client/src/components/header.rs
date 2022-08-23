@@ -9,7 +9,10 @@ pub fn header() -> Html {
             <nav class="navbar navbar-light">
                 <div class="container">
                     <Link<AppRoute> to={AppRoute::Home} classes="navbar-brand">
-                        { "home" }
+                        { "Home" }
+                    </Link<AppRoute>>
+                    <Link<AppRoute> to={AppRoute::About} classes="navbar-brand">
+                        { "About" }
                     </Link<AppRoute>>
                 </div>
             </nav>
