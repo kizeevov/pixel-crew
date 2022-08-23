@@ -7,7 +7,6 @@ use solana_program::entrypoint::ProgramResult;
 use solana_program::program_error::ProgramError;
 use solana_program::pubkey::Pubkey;
 use solana_program::{msg, system_instruction};
-use solana_sdk::account::create_is_signer_account_infos;
 
 pub struct Processor;
 
@@ -32,19 +31,26 @@ impl Processor {
         height: u32,
     ) -> ProgramResult {
         let acc_iter = &mut accounts.iter();
+
         let admin_info = next_account_info(acc_iter)?;
         let config_info = next_account_info(acc_iter)?;
         let rent_info = next_account_info(acc_iter)?;
         let system_program_info = next_account_info(acc_iter)?;
+
+        if !admin_info.is_signer {
+            return Err(ProgramError::MissingRequiredSignature);
+        }
 
         let (config_pubkey, bump_seed) = CanvasConfig::get_config_pubkey_with_bump();
         if config_pubkey != *config_info.key {
             return Err(ProgramError::InvalidArgument);
         }
 
-        if !admin_info.is_signer {
-            return Err(ProgramError::MissingRequiredSignature);
-        }
+        let config = CanvasConfig {
+            admin,
+            width,
+            height,
+        };
 
         todo!()
     }

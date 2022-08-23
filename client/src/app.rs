@@ -1,6 +1,7 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
+use crate::components::{body::Body, footer::Footer, header::Header};
 use crate::routes::{switch, AppRoute};
 
 /// Root app component
@@ -8,14 +9,18 @@ use crate::routes::{switch, AppRoute};
 pub fn app() -> Html {
     html! {
         <BrowserRouter>
-            <div class="pc-app">
-              <div class="pc-main">
-                <article>
-                  <Switch<AppRoute> render={Switch::render(switch)} />
-                </article>
-              </div>
-              <footer/>
-            </div>
+            <Header />
+            <Body />
+            // <div class="body">
+            //     <div class="pc-app">
+            //       <div class="pc-main">
+            //         <article>
+            //           <Switch<AppRoute> render={Switch::render(switch)} />
+            //         </article>
+            //       </div>
+            //     </div>
+            // </div>
+            <Footer />
         </BrowserRouter>
     }
 }
